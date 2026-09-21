@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block body %}
+<h1>Admins</h1>
+<div class="box">
+    {% for admin in admins %}
+        <div class="admin-item">
+            <p style="font-size: 3vmin;"> Name: {{admin[0]}} {{admin[1]}}<br> 
+                Email: {{admin[2]}} </p>
+            
+
+            <a href="/action_delete_admin/{{admin[2]}}">delete</a>
+        </div>
+    {% endfor %}
+    <a href="/add_admin">Add Admin</a>
+</div>
+<a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}

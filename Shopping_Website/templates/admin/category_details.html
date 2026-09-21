@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block body %}
+
+
+    <div class="box" style="margin:24px">
+        <a href="/" style="float:right;margin:5px">edit</a>
+
+            {% for i in items %}
+                 <div class="box-item">
+                    <ul>
+                        <li>Category {{i[0]}} </li>
+                        <li><img src="{{i[1]}}" height="150"> </li>
+                        <li>{{i[2]}}</li>
+                    </ul>
+                </div>
+                <a href="/action_delete_category/{{i[0]}}" style="float:right;margin:5px">delete</a>
+            {% endfor %}
+            
+    </div>
+    <a href="/categories" >Back</a>
+
+{% endblock %}

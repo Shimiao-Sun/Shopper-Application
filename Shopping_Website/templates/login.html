@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block body %}
+<form action="/authenticate" method = "POST">
+    <h1>Log in</h1>
+    <h4>Email&nbsp;&nbsp; <input type = "text" name = "email" /></h4>
+    <h4>Password&nbsp;&nbsp; <input type = "password" name = "password" /></h4>
+    <input type = "submit" value = "Submit" />
+</form>
+<br />
+<br />
+<br />   
+<div style="float: left;">Forget Password?</div> <div style="float: right;">New User?</div>
+<br />
+<a href="/register" style="float: right;">Register</a> <a href="/forgot_password" style="float: left;">Reset</a>
+{% endblock %}

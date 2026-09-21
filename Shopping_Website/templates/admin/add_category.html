@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block body %}
+<form action="/action_add_category" method = "POST" enctype="multipart/form-data">
+    <h1>Add New Categories</h1>
+    <h4>Name&nbsp;&nbsp; <input type = "text" name = "name" /></h4>
+    <h4>Image&nbsp;&nbsp; <input type = "file" name = "image" accept="image/png, image/jpeg" /></h4>
+    <input type = "submit" value = "Submit" />
+</form>
+<a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+{% block body %}
+<form action="/action_add_item" method = "POST" enctype="multipart/form-data">
+    <h1>Add new Items for 
+        <select id = "username" name = "username">
+            <span>
+                <script>    
+                    var options = "";
+                    var username = "{{username}}";
+                    var user_format = username.substring(1, username.length-1);
+                    var username_list = user_format.split(", ");
+                    var length = username_list.length;
+                    for (var i = 0; i < length; i++) {
+                        options += "<option>" + username_list[i].substring(5, username_list[i].length-5); + "</option>\n";
+                    }
+                    // options += "<option>" + username_list[0] + "</option>\n";
+                    document.getElementById("username").innerHTML = options;              
+                </script>
+                </span>
+        </select>
+    </h1>
+    
+    <h4>Name&nbsp;&nbsp; <input type = "text" name = "name" /></h4>
+    <h4>Price&nbsp;&nbsp; <input type = "text" name = "price" /></h4>
+    <h4>Description&nbsp;&nbsp; <input type = "text" name = "desc" /></h4>
+    <h4>Quantity&nbsp;&nbsp; <input type = "text" name = "quantity" /></h4>
+    <h4>Category&nbsp;&nbsp; 
+        <select id="categories" name="Category">
+            <span>
+            <script>    
+                var options = "";
+                var category = "{{category}}";
+                var cat_format = category.substring(1, category.length-1);
+                var category_list = cat_format.split(", ");
+                var length = category_list.length;
+                for (var i = 0; i < length; i++) {
+                    options += "<option>" + category_list[i].substring(5, category_list[i].length-5); + "</option>\n";
+                }
+                document.getElementById("categories").innerHTML = options;              
+            </script>
+            </span>
+        </select>
+
+    </h4>
+    <h4>Image&nbsp;&nbsp; <input type = "file" name = "image" accept="image/png, image/jpeg" /></h4>
+    
+    <input type = "submit" value = "Submit"/> 
+    <a href="/items" style="float:right;font-size:24px">Back</a>
+</form>
+{% endblock %}

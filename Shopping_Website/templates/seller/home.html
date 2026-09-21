@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block body %}
+    <h1> Welcome {{ session['username'] }}! </h1>
+
+    <ul class="navbar" style="text-align:center; margin-top: 100px;">
+        <li> <a href="/items">Your Items</a> </li>
+        <li>&emsp;</li>
+        <li> <a href="/orders">Your Orders</a> </li>
+    </ul>
+{% endblock %}

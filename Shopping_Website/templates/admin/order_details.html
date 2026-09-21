@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block body %}
+<form action="/action_update_order/{{id}}" method = "POST">
+    <h1>Order  Details</h1>
+    <div class="box">
+        <table>
+            {% for i in items %}
+            <tr>
+                <td> item: {{i[0]}} </td>
+                <td> amount: {{i[1]}} </td>
+                <td> price: {{i[2]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h4 style="float:right;font-size: 18px;">Progress&nbsp;&nbsp; 
+        <select id="status" name="status">
+            <option value="1">In Transit</option>
+            <option value="2">Delivered</option>
+            <option value="3">Received by Customer</option>
+        </select>
+    </h4>
+    <br />
+    <input type = "submit" value = "Submit" /> 
+
+    <a href="/orders" style="float:right;font-size:24px">Back</a>
+</form>
+
+{% endblock %}

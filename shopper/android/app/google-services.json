@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1081626014730",
+    "project_id": "soft3888-g2",
+    "storage_bucket": "soft3888-g2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081626014730:android:cb8f6f51bc23d37de85bf3",
+        "android_client_info": {
+          "package_name": "com.example.shopper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081626014730-g2939380vmflj3kilbgsatn6km3g946d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6UYm0SfrjPy-d5fw8E-ltxrRFOctrKU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081626014730-g2939380vmflj3kilbgsatn6km3g946d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1081626014730-4b5shhurmip7aicvmn6mnlbqnuf4n8lv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tryhard"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

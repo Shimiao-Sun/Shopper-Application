@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <ul class="navbar">
+            <a href="/" style="background:none;float:left;padding: 0;"><img src = "{{ url_for('static', filename='icon.svg') }}" alt="Shopper Logo" style="float: left; margin-top: 30px; width: 100%;"/></a>
+            <h1 style="float: left; margin: 20px;"><a href="/" style="background:none; color:#A9CFFC">shopper</a></h1>
+            
+            {% if session.get('state') == 'admin' %}
+                <li> <a href="/" style="padding: 10px 14px; border-radius:100%;">A</a> </li>
+            {% elif session.get('state') == 'seller' %}
+                <li> <a href="/" style="padding: 10px 14px; border-radius:100%;">S</a> </li>
+            {% endif %}
+            {% if session.get('state') != None %}
+                <li> <a href="/logout">Logout</a> </li>
+            {% endif %}
+        </ul>
+
+        <br/><br/>
+        <br/><br/>
+        <br/><br/>
+
+        <div class="main_body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

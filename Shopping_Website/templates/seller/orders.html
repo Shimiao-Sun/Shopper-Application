@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% block body %}
+<h1>Your Orders</h1>
+<div class="box">
+    {% for ord in orders %}
+        <div class="box-item">
+            <p> Order ID: {{ord[0]}} </p>
+            <a href="/view_order/{{ord[0]}}">Details</a>
+        </div>
+    {% endfor %}
+</div>
+<a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}

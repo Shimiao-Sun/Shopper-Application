@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block body %}
+<h1>Items</h1>
+<div class="box">
+    <div>
+        {% for i in items %}
+                <div class="box-item">
+                    <ul>
+                        <li><p>Name: {{i[0]}} </p></li>
+                        <li><img src="{{i[1]}}" width="150" height="150"></li>
+                        <li><a href="/action_delete_item/{{i[2]}}" style="background-color:#EE3355;">delete</a></li>
+                    </ul>
+                </div>
+            {% endfor %}
+    </div>
+    <a href="/add_item">Add Item</a>
+</div>
+<a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}

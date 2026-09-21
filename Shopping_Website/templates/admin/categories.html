@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block body %}
+    <h1>Categories</h1>
+    <div class="box">
+        <div>
+            {% for cat in categories %}
+                <div class="box-item">
+                    <ul>
+                        <li><p> {{cat[2]}} </p></li>
+                        <li><img src="{{cat[1]}}" height="150"></li>
+                        <li><p> Size: {{cat[3]}} </p></li>
+                        <li><a href="/category_details/{{cat[0]}}">details</a></li>
+                        {% if cat[3] > 0 %}
+                        <li><a href="/action_delete_category/{{cat[2]}}" style="background-color:#EE3355;" onclick="return confirm('This category contains items. Are you sure you would like to delete this category?')">delete</a></li>
+                        {% else %}
+                        <li><a href="/action_delete_category/{{cat[2]}}" style="background-color:#EE3355;" >delete</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/add_category">Add Category</a>
+    </div>
+    <a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}

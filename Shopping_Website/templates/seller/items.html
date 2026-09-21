@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block body %}
+<h1>Your Items</h1>
+<div class="box">
+    <div>
+        {% for i in items %}
+                <div class="box-item">
+                    <p>Name: {{i[0]}} </p>
+                    <img src="{{i[1]}}" width="150" height="150">
+                </div>
+            {% endfor %}
+    </div>
+    <a href="/add_item">Add Item</a>
+</div>
+<a href="/" style="float:right;font-size:24px;margin:15px">Back</a>
+{% endblock %}
