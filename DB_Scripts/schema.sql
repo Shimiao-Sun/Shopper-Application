@@ -98,5 +98,4 @@ CREATE TABLE ApiKey(
     apikey VARCHAR(256),
     api VARCHAR(50)
 );
-INSERT INTO ApiKey (apikey,api) VALUES ('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','SendGrid');
 
